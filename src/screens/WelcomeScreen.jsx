@@ -12,17 +12,21 @@ const launcherImage = require('../assets/ic_launcher.png');
 
 const WelcomeScreen = () => {
   return (
-    <SafeAreaView style={styles.container}>
-      <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-        <Image source={launcherImage} style={styles.launcherImage}></Image>
-      </View>
+    <View style={styles.container}>
+      <Text style={styles.appName}>Food Recipe's</Text>
+      <Image source={launcherImage} style={styles.launcherImage}></Image>
 
-      <View style={styles.buttonContainer}>
+      <View style={styles.buttonLoginContainer}>
         <TouchableOpacity style={styles.button}>
-          <Text style={styles.buttonText}>Let's Get Started</Text>
+          <Text style={styles.buttonLoginText}>Log In</Text>
         </TouchableOpacity>
       </View>
-    </SafeAreaView>
+      <View style={styles.buttonSignUpContainer}>
+        <TouchableOpacity style={styles.button}>
+          <Text style={styles.buttonSignUpText}>Sign Up</Text>
+        </TouchableOpacity>
+      </View>
+    </View>
   );
 };
 
@@ -31,23 +35,43 @@ export default WelcomeScreen;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#FD5D69',
+    backgroundColor: '#FFFFFF',
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  appName: {
+    fontSize: 30,
+    marginVertical: 40,
+    fontWeight: '700',
   },
   launcherImage: {
     width: 200,
     height: 200,
   },
-  buttonContainer: {
+  buttonLoginContainer: {
+    borderRadius: 12,
+    backgroundColor: '#FD5D69',
+    width: '80%',
+    padding: 10,
+    marginTop: 120,
+  },
+  buttonSignUpContainer: {
     borderRadius: 12,
     backgroundColor: '#FFFFFF',
     width: '80%',
-    padding: 14,
-    marginVertical: 20,
+    padding: 10,
+    marginTop: 30,
+    borderColor: '#999999',
+    borderWidth: 1,
   },
-  buttonText: {
+  buttonLoginText: {
     textAlign: 'center',
+    color: '#FFFFFF',
+    fontSize: 20,
+  },
+  buttonSignUpText: {
+    textAlign: 'center',
+    color: '#000000',
     fontSize: 20,
   },
 });
