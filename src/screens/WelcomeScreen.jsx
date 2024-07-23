@@ -10,14 +10,18 @@ import React from 'react';
 
 const launcherImage = require('../assets/ic_launcher.png');
 
-const WelcomeScreen = () => {
+const WelcomeScreen = ({navigation}) => {
+  const navigateToLogin = () => {
+    navigation.navigate('LoginScreen');
+  };
+
   return (
     <View style={styles.container}>
       <Text style={styles.appName}>Food Recipe's</Text>
       <Image source={launcherImage} style={styles.launcherImage}></Image>
 
       <View style={styles.buttonLoginContainer}>
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity style={styles.button} onPress={navigateToLogin}>
           <Text style={styles.buttonLoginText}>Log In</Text>
         </TouchableOpacity>
       </View>
