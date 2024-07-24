@@ -48,11 +48,11 @@ const LoginScreen = ({navigation}) => {
         marginTop={{marginTop: 48}}></PrimaryButton>
       <View
         style={{flexDirection: 'row', justifyContent: 'center', marginTop: 30}}>
-        <Text style={{color: '#000', fontWeight: '500', fontSize: 16}}>
+        <Text style={{color: '#000', fontWeight: '500', fontSize: 20}}>
           Don't have an account?{' '}
         </Text>
         <Text
-          style={{color: '#FD5D69', fontWeight: '700', fontSize: 16}}
+          style={{color: '#FD5D69', fontWeight: '500', fontSize: 20}}
           onPress={navigateToSignup}>
           Sign up
         </Text>
@@ -69,10 +69,11 @@ const styles = StyleSheet.create({
     backgroundColor: '#FFFFFF',
   },
   inputTitleText: {
-    fontSize: 16,
+    fontSize: 20,
     marginHorizontal: 20,
     marginVertical: 8,
     fontWeight: '500',
+    color: '#000',
   },
   textInputFields: {
     height: 48,
@@ -80,8 +81,8 @@ const styles = StyleSheet.create({
     borderColor: '#d6d6d6',
     borderWidth: 1,
     borderRadius: 10,
-    paddingHorizontal: 8,
-    color: 'black', // Customize text color
+    paddingHorizontal: 16,
+    color: '#000', // Customize text color
     fontSize: 18, // Customize text size
   },
 });

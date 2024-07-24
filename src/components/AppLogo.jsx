@@ -2,7 +2,7 @@ import {Image, StyleSheet} from 'react-native';
 
 const headerLogo = require('../assets/ic_launcher.png');
 
-export default AppHeaderLogo = () => {
+export default AppLogo = () => {
   return <Image source={headerLogo} style={styles.imageSize}></Image>;
 };
 

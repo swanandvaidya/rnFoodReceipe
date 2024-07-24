@@ -1,9 +1,11 @@
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import React from 'react';
 
-const PrimaryButton = ({buttonText, marginTop}) => {
+const PrimaryButton = ({buttonText, marginTop, onPress}) => {
   return (
-    <TouchableOpacity style={[styles.buttonContainer, marginTop]}>
+    <TouchableOpacity
+      style={[styles.buttonContainer, marginTop]}
+      onPress={onPress}>
       <Text style={styles.buttonText}>{buttonText}</Text>
     </TouchableOpacity>
   );
@@ -22,6 +24,6 @@ const styles = StyleSheet.create({
   buttonText: {
     color: '#FFF',
     textAlign: 'center',
-    fontSize: 18,
+    fontSize: 20,
   },
 });
