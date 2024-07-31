@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
   appName: {
     fontSize: 30,
     marginVertical: 40,
-    fontWeight: '700',
+    fontFamily: 'Poppins-SemiBold',
   },
   launcherImage: {
     width: 200,
@@ -71,11 +71,13 @@ const styles = StyleSheet.create({
   buttonLoginText: {
     textAlign: 'center',
     color: '#FFFFFF',
-    fontSize: 20,
+    fontSize: 22,
+    fontFamily: 'Poppins-SemiBold',
   },
   buttonSignUpText: {
     textAlign: 'center',
     color: '#000000',
-    fontSize: 20,
+    fontSize: 22,
+    fontFamily: 'Poppins-SemiBold',
   },
 });

@@ -31,13 +31,20 @@ const LoginScreen = () => {
       <View
         style={{justifyContent: 'center', alignItems: 'center', marginTop: 60}}>
         <AppLogo></AppLogo>
-        <AppHeader headerName="Create an Account" />
+        <Text
+          style={{
+            marginVertical: 20,
+            fontFamily: 'Poppins-SemiBold',
+            fontSize: 24,
+          }}>
+          Create an Account
+        </Text>
       </View>
       <Separator spacing={20}></Separator>
       <TextInput
         style={styles.textInputFields}
         placeholder="Enter username"
-        placeholderTextColor="#00000066" // Customize placeholder text color
+        fontFamily="Poppins-regular"
         keyboardType="default"
         onChangeText={text => setUsername(text)}
         value={username}
@@ -48,7 +55,7 @@ const LoginScreen = () => {
       <TextInput
         style={styles.textInputFields}
         placeholder="Enter email"
-        placeholderTextColor="#00000066" // Customize placeholder text color
+        fontFamily="Poppins-regular"
         keyboardType="email-address"
         onChangeText={text => setEmail(text)}
         value={email}
@@ -58,7 +65,7 @@ const LoginScreen = () => {
       <TextInput
         style={styles.textInputFields}
         placeholder="Enter mobile number"
-        placeholderTextColor="#00000066" // Customize placeholder text color
+        fontFamily="Poppins-regular"
         keyboardType="number-pad"
         onChangeText={text => setMobileNumber(text)}
         value={mobileNumber}
@@ -69,7 +76,7 @@ const LoginScreen = () => {
       <TextInput
         style={styles.textInputFields}
         placeholder="Enter password"
-        placeholderTextColor="#00000066" // Customize placeholder text color
+        fontFamily="Poppins-regular"
         keyboardType="default"
         onChangeText={text => setPassword(text)}
         value={password}
@@ -82,11 +89,15 @@ const LoginScreen = () => {
         onPress={doSignUp}></PrimaryButton>
       <View
         style={{flexDirection: 'row', justifyContent: 'center', marginTop: 20}}>
-        <Text style={{color: '#000', fontWeight: '500', fontSize: 20}}>
+        <Text style={{fontFamily: 'Poppins-Regular', fontSize: 20}}>
           Already have an account?{' '}
         </Text>
         <Text
-          style={{color: '#FD5D69', fontWeight: '500', fontSize: 20}}
+          style={{
+            color: '#FD5D69',
+            fontFamily: 'Poppins-SemiBold',
+            fontSize: 20,
+          }}
           onPress={navigateToLogin}>
           Log In
         </Text>
@@ -110,6 +121,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     paddingHorizontal: 16,
     color: '#000', // Customize text color
-    fontSize: 18, // Customize text size
+    fontSize: 20, // Customize text size
+    fontFamily: 'Poppins-regular',
   },
 });
