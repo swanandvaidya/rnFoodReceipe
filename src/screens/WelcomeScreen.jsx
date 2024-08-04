@@ -15,6 +15,10 @@ const WelcomeScreen = ({navigation}) => {
     navigation.navigate('LoginScreen');
   };
 
+  const navigateToSignUp = () => {
+    navigation.navigate('SignUpScreen');
+  };
+
   return (
     <View style={styles.container}>
       <Text style={styles.appName}>Food Recipe's</Text>
@@ -26,7 +30,7 @@ const WelcomeScreen = ({navigation}) => {
         </TouchableOpacity>
       </View>
       <View style={styles.buttonSignUpContainer}>
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity style={styles.button} onPress={navigateToSignUp}>
           <Text style={styles.buttonSignUpText}>Sign Up</Text>
         </TouchableOpacity>
       </View>

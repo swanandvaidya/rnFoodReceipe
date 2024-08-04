@@ -30,11 +30,11 @@ const styles = StyleSheet.create({
   },
   headerText: {
     fontSize: 28,
-    fontWeight: '500',
+    fontFamily: 'Poppins-SemiBold',
     color: Colors.primary,
   },
   subtitle: {
     fontSize: 18,
-    fontWeight: '300',
+    fontFamily: 'Poppins-Regular',
   },
 });
